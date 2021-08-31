@@ -14,7 +14,6 @@ PhoneNumber varchar(16),
 EmailId varchar(24)
 );
 
-/* Insert query */
 Insert into PersonContact(FirstName,LastName,City,State,ZipCode,PhoneNumber,EmailId) values 
 ('Omkar','B','Mumbai','MH','400091','9999888877','omkarb@mail.com'),
 ('Ramesh','M','Sansad Marg','Delhi','110001','9988558899','rameshm@mail.com'),
@@ -22,7 +21,6 @@ Insert into PersonContact(FirstName,LastName,City,State,ZipCode,PhoneNumber,Emai
 ('Riya','D','Chennai','Tamil Nadu','600005','7744112233','riyad@mail.com'),
 ('Neha','G','Kolkata','West Bangal','700073','7775553330','nehag@mail.com');
 
-/* Select or retrive data query */
 select * from PersonContact;
 
 /* UPDATE query */
