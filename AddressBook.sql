@@ -37,4 +37,8 @@ UPDATE PersonContact set Gender='M' where FirstName='Omkar' or FirstName='Ramesh
 UPDATE PersonContact set Gender='F' where FirstName='Riya' or FirstName='Neha'
 
 /* SELECT with WHERE condition */
-SELECT FirstName,City from PersonContact where State='Maharashtra';
+SELECT FirstName,EmailId,City from PersonContact where State='Maharashtra';
+
+/* using database function and group by */
+Select COUNT(FirstName) as MalePersonCount From PersonContact Where Gender='M' Group by Gender;
+Select COUNT(FirstName) as FemalePersonCount From PersonContact Where Gender='F' Group by Gender;
