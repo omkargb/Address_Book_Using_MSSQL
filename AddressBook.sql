@@ -14,6 +14,7 @@ PhoneNumber varchar(16),
 EmailId varchar(24)
 );
 
+/* Insert query */
 Insert into PersonContact(FirstName,LastName,City,State,ZipCode,PhoneNumber,EmailId) values 
 ('Omkar','B','Mumbai','MH','400091','9999888877','omkarb@mail.com'),
 ('Ramesh','M','Sansad Marg','Delhi','110001','9988558899','rameshm@mail.com'),
@@ -21,6 +22,7 @@ Insert into PersonContact(FirstName,LastName,City,State,ZipCode,PhoneNumber,Emai
 ('Riya','D','Chennai','Tamil Nadu','600005','7744112233','riyad@mail.com'),
 ('Neha','G','Kolkata','West Bangal','700073','7775553330','nehag@mail.com');
 
+/* Select or retrive data query */
 select * from PersonContact;
 
 /* UPDATE query */
@@ -28,3 +30,11 @@ UPDATE PersonContact set State='Maharashtra' where FirstName='Omkar' or FirstNam
 
 /* ALTER, DROP query to remove data column */
 ALTER table PersonContact DROP column Address;
+
+/* Alter to add new column */
+ALTER table PersonContact Add Gender varchar(2);
+UPDATE PersonContact set Gender='M' where FirstName='Omkar' or FirstName='Ramesh' or FirstName='Suresh'
+UPDATE PersonContact set Gender='F' where FirstName='Riya' or FirstName='Neha'
+
+/* SELECT with WHERE condition */
+SELECT FirstName,City from PersonContact where State='Maharashtra';
